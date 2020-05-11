@@ -5,8 +5,15 @@ import MikePhoto from "../../img/m101.jpg";
 
 export const ContactCard = props => {
 	const [state, setState] = useState({
-		//initialize state here
+		name: '',
+		address: '',
+		phone: '',
+		email: ''
 	});
+
+	const handleEdit = () => {
+		console.log("dasdas");
+	};
 
 	return (
 		<li className="list-group-item">
@@ -16,7 +23,7 @@ export const ContactCard = props => {
 				</div>
 				<div className="col-12 col-sm-6 col-md-9 text-center text-sm-left">
 					<div className=" float-right">
-						<button className="btn">
+						<button className="btn" onClick={handleEdit}>
 							<i className="fas fa-pencil-alt mr-3" />
 						</button>
 						<button className="btn" onClick={() => props.onDelete()}>
